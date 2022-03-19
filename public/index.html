@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Search parkinglot</title>
+</head>
+<body>
+<!-- 주차장 -->
+<h1> 인천 주차장 검색(임시) </h1>
+-----------------------------------------------------------<br>
+<h2> 전체 주차장 <h2>
+<form method='post' action='api/users/find' name='userForm' target="targetURL">
+전체 주차장 보기 <input type="button" value="인천 주차장 보기" onclick="document.targetURL.location.href='/park/list'">
+<p>
+----------------------------------------------------------<br>
+검색하실 구를 선택하세요
+<select name="gu">
+            <option onclick='document.targetURL.location.href="/park/find/gu?gu="+document.userForm.gu.value'>계양구</option>
+            <option onclick='document.targetURL.location.href="/park/find/gu?gu="+document.userForm.gu.value'>서구</option>
+            <option onclick='document.targetURL.location.href="/park/find/gu?gu="+document.userForm.gu.value'>남구</option>
+            <option onclick='document.targetURL.location.href="/park/find/gu?gu="+document.userForm.gu.value'>남동구</option>
+</select>
+<input type='button' value="Search" onclick='document.targetURL.location.href="/park/find/gu?gu="+document.userForm.gu.value'>
+<!-- 구를 입력하면 ex ) 권선구 입력 시, 권선구에 해당하는 주차장이 다 뜨게끔 설계하기.-->
+<p>
+----------------------------------------------------------<br>
+검색하실 동을 선택하세요
+<select name="dong">
+            <option onclick='document.targetURL.location.href="/park/find/dong?dong="+document.userForm.dong.value'>귤현동</option>
+            <option onclick='document.targetURL.location.href="/park/find/dong?dong="+document.userForm.dong.value'>오류동</option>
+            <option onclick='document.targetURL.location.href="/park/find/dong?dong="+document.userForm.dong.value'>검암동</option>
+            <option onclick='document.targetURL.location.href="/park/find/dong?dong="+document.userForm.dong.value'>주안동</option>
+            <option onclick='document.targetURL.location.href="/park/find/dong?dong="+document.userForm.dong.value'>장수동</option>
+</select>
+<input type='button' value="Search" onclick='document.targetURL.location.href="/park/find/dong?dong="+document.userForm.dong.value'>
+<!-- 동을 입력하면 ex ) 당수동 입력 시, 당수동에 해당하는 주차장이 다 뜨게끔 설계하기.-->
+<p>
+----------------------------------------------------------<br>
+<h4> 주차장 삽입 </h4>
+<input type='button' value='go to insert' size='10' onclick = "location.href='insert.html'">
+<p>
+----------------------------------------------------------<br>
+<h4> 주차장 삭제 </h4>
+<input type='button' value='go to delete' size='10' onclick='location.href="delete.html"'>
+<p>
+----------------------------------------------------------<br>
+<h4> 주차장 수정 </h4>
+<input type='button' value='go to update' size='10' onclick='location.href="update.html"'>
+<p>
+----------------------------------------------------------<br>
+<h4> 지도 보러 가기 </h4>
+<input type='button' value="지도" size="10" onclick="location.href='map.html'">
+<p>
+----------------------------------------------------------<br>
+<iframe name=targetURL class="iframe-preview center" width="50%" height="500" style="border:none;">
+</iframe>
+</body>
+</html>

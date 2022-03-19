@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Search parkinglot</title>
+</head>
+<body>
+<h1> 주차장 삭제 </h1>
+-----------------------------------------------------------<br>
+<form method='post' action='api/users/find' name='userForm' target="targetURL">
+<h4>주차장 삭제</h4><input type='text' name='name' placeholder='주차장이름'>
+<input type='submit' value='delete' onclick='this.form.action="/delete"' >
+<p>
+<iframe name=targetURL class="iframe-preview center" width="60%" height="500" style="border:none;" >
+</body>
+</html>
