@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Parkinglot updatePage</title>
+</head>
+<body>
+<h2> 주차장 수정 </h2>
+<p>
+  <form method='post' action='api/users/find' name='userForm' target="targetURL">
+    주차장 찾기 <input type="text" size='10' name='name'>
+    <input type='button' value="Search"
+      onclick='document.targetURL.location.href="/park/get?name="+document.userForm.name.value'>
+  <p>
+    주차장구분 <input type='text' name='type' size='10'>
+  <p>
+    도로명 <input type='text' name='place' size='10'>
+  <p>
+    동 <input type='text' name='dong' size='10'>
+  <p>
+    주차대수 <input type='text' name='num' size='10'>
+  <p>
+    장애인 주차 <input type='text' name='disablednum' size='10'>
+  <p>
+    여성행복주차 <input type='text' name='wpp' size='10'>
+  <p>
+    운영요일 <input type='text' name='opday' size='10'>
+  <p>
+    평일시작 <input type='text' name='wds' size='10'>
+  <p>
+    평일종료 <input type='text' name='wde' size='10'>
+  <p>
+    공휴일시작 <input type='text' name='hds' size='10'>
+  <p>
+    공휴일마감<input type='text' name='hde' size='10'>
+  <p>
+    기본주차시간 <input type='text' name='bpt' size='10'>
+  <p>
+    기본요금 <input type='text' name='bpf' size='10'>
+   <p>
+    한달주차요금 <input type='text' name='mpf' size='10'>
+  <p>
+-----------------------------------------------------------<br>
+<h4>주차장 삽입</h4><input type='submit' value='update' onclick='this.form.action="/update"' >
+<p>
+<iframe name=targetURL class="iframe-preview center" width="60%" height="500"
+style="border:none;" >
+  </iframe>
+  </body>
+  </html>
